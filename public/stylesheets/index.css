@@ -1,0 +1,90 @@
+/* global setting */
+@font-face {
+    font-family: 'MainText';
+    src: url('../fonts/TaipeiSansTCBeta-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'MainText-Bold';
+    src: url('../fonts/TaipeiSansTCBeta-Bold.ttf') format('truetype');
+}
+:root {
+    --main-color: #8FD3E8 !important;
+    --light-gray: #F7F7F7 !important;
+    --second-color: #419FFF !important;
+    --third-color: #5868BA !important;
+}
+* {
+    font-family: MainText,"Microsoft JhengHei" !important;
+}
+/* content setting */
+.content {
+    display: flex;
+    flex-direction: column;
+    margin: 4% auto;
+    align-items: center;
+}
+.content h1 {
+    color: var(--main-color);
+    letter-spacing: .15em;
+    font-size: 2.5em;
+    font-family: MainText-Bold !important;
+}
+.content-wrap {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin-top: -2%;
+}
+.content-wrap .item {
+    flex-grow:1;
+    width: 450px;
+    padding: 2% 0;
+    margin: 6% 1%;
+    letter-spacing: .12em;
+    font-size: 1.5em;
+    text-align: center;
+    /* border: 1px solid #eee; */
+    box-shadow: 2px 2px 4px 2px rgba(0,0,0,0.2);
+    border-bottom: 5px solid var(--main-color);
+}
+.content-wrap .item:hover {
+    transition: .5s;
+    transform: scale(1.02);
+}
+.content-wrap .item img {
+    width: 80px;
+    margin-bottom: 8%; 
+}
+.content-wrap .item h4 {
+    color:var(--main-color);
+}
+
+.content-wrap .item .text-wrap {
+    width: 80%;
+    font-size: .8em;
+    letter-spacing: 0;
+    margin: 5% auto;
+    line-height: 1.8;
+    text-align: center;
+}
+.content-wrap a {
+    color:black;
+}
+.content-wrap a:hover {
+    text-decoration: none;
+    color:black;
+}
+
+/* for iphone */
+@media (max-width: 400px) {
+    .content-wrap {
+        width: 90%;
+        flex-direction: column;
+    }
+    .content-wrap .item {
+        width: 90%;
+        margin: 5% auto;
+    }
+
+    
+}

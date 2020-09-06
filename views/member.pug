@@ -1,0 +1,35 @@
+link(rel='stylesheet' href='./stylesheets/member.css')
+//- link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet")
+include includes/header.pug
+block content
+.member-wrap
+  .left-wrap
+    .left-profile
+      img(src="./imgs/login_big.jpg")
+      .left-name 編輯姓名
+    .menu
+      ul
+        li
+          a.change(href="member?profile") 修改資料
+        li
+          a.adopt(href="member?adoption") 發佈送養
+        li
+          a.edit(href="member?edit") 編輯送養
+        li
+          a.attention(href="member?attention") 我的關注
+        li
+          a.message(href="member?message") 我的留言
+        li
+          a.logout(href="adoption?kind=all&paging=0") 登出
+  .right-wrap
+    include member-profile.pug
+    include member-adoption.pug
+    include member-edit.pug
+    include member-attention.pug
+    include member-message.pug
+    include member-chat.pug
+    include adoption-details.pug
+script(type="text/javascript" src="js/lib.js")
+script(type="text/javascript" src="js/member.js")
+
+include includes/footer.pug

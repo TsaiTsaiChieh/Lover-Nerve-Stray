@@ -1,0 +1,272 @@
+/* global setting */
+@font-face {
+    font-family: 'MainText';
+    src: url('../fonts/TaipeiSansTCBeta-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'MainText-Bold';
+    src: url('../fonts/TaipeiSansTCBeta-Bold.ttf') format('truetype');
+}
+:root {
+    --main-color: #8FD3E8 !important;
+    --light-gray: #F7F7F7 !important;
+    --second-color: #419FFF !important;
+    --third-color: #5868BA !important;
+    --fourth-color: #6B9EAE !important;
+    --red-color: #FF4651 !important;
+}
+* {
+    font-family: MainText, "Microsoft JhengHe" !important;
+}
+/* header setting */
+header {
+    display: flex;
+    flex-direction: column; 
+    height: auto;
+    text-align: center;
+}
+header img #logo {
+    width: 15%;
+    align-self: center;
+    margin-top: 1em;
+}
+header h1 {
+    color: var(--main-color);
+    font-size: 2.5em;
+    letter-spacing: .15em;
+    line-height: 1.5;
+    font-family: MainText-Bold !important;
+}
+header h4 {
+    color: var(--main-color);
+    font-size: 1em;
+    letter-spacing: .18em;
+    margin-bottom: 1em;
+    font-family: MainText-Bold !important;
+}
+header nav {
+    background: var(--light-gray);
+    height: auto;
+    /* padding: .5% 0; */
+}
+header nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0 15%;
+    /* padding: 1% 0; */
+}
+header nav ul li{
+    letter-spacing: .15em;
+    
+}
+header nav a {
+    flex-grow: 1;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: black;
+    line-height: 1.5;
+    letter-spacing: .25em;
+    padding: 1% 0;
+}
+/* header nav ul li a {
+    font-size: 1.2em;
+    color: black;
+    line-height: 1.5;
+    letter-spacing: .25em;
+} */
+header nav ul a:hover {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: .5s;
+    background: var(--main-color);
+}
+/* member setting */
+header .wrap {
+    display: flex;
+    flex-direction:row; 
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+header .wrap .member{
+    position: absolute;
+    top: 18%;
+    right: 15%;
+    display: flex;
+    flex-direction: row;
+    color: var(--main-color);
+    font-size: 1.2em;
+}
+header .wrap .member:hover {
+    opacity: .8;
+}
+header .wrap .member p {
+   margin: auto 0 auto 10px;
+   letter-spacing: 3px;
+}
+header .wrap .member img {
+    object-fit: cover;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+
+/* login page setting */
+
+.login-page,
+.signup-page {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: white;
+    z-index: 20;
+    top: 0;
+    right: 0;
+}
+/* .login-page {
+    display: block;
+} */
+.login-page .form,
+.signup-page .form
+ {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%; 
+}
+.login-page .title,
+.signup-page .title {
+    font-size: 3em;
+    letter-spacing: .5em;
+    color: var(--third-color);
+    font-weight: bold;
+    margin-bottom: .5%; 
+}
+.login-page .subtitle,
+.signup-page .subtitle{
+    display: flex;
+    flex-direction: row;
+    font-size: 1.5em;
+    margin-bottom: 1%; 
+}
+.login-page .subtitle p,
+.signup-page .subtitle p {
+    color: var(--main-color);
+    
+}
+.login-page .subtitle p:hover,
+.signup-page .subtitle p:hover {
+    cursor: pointer;
+}
+.login-page span,
+.signup-page span{
+    letter-spacing: 2px;
+    margin-bottom: 1%; 
+    margin-top: 1%; 
+}
+.login-page input,
+.signup-page input {
+    font-family: "Microsoft JhengHe" !important;
+    width: 22%;
+    height: 3em;
+    border: none;
+    border-bottom: 2px solid #999797;
+}
+.login-page button,
+.signup-page button {
+    color: white;
+    background: var(--third-color);
+    font-size: 1.5em;
+    width: 22%;
+    margin-top: .5%;
+    padding: .4% 0;
+    border-radius: 5px;
+    box-shadow: 1px 5px 10px -5px grey;
+}
+.login-page button:hover,
+.signup-page button:hover {
+    opacity: .8;
+    transition: .5s;
+    transform: scale(1.03);
+}
+.signup-page .message,
+.login-page .message{
+    opacity: 0;
+    color: var(--red-color);
+}
+/* login-page line setting */
+.login-page .line-wrap {
+    margin-top: 1%; 
+    display: flex;
+    flex-direction: row;
+}
+.login-page .line-wrap .line {
+    width: 130px;
+    border-top: 1px solid black; 
+    margin-top: 5%;
+}
+.login-page .line-wrap p {
+    font-size: 1em;
+    letter-spacing: 4px;
+    padding: 0 10px;
+}
+/* FB login button */
+
+/* close setting */
+.close {
+    position: absolute;
+    right: 10%;
+    top: 5%;
+    width: 32px;
+    height: 32px;
+    opacity: 0.3;
+  }
+  .close:hover {
+    opacity: 1;
+  }
+  .close:before, .close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 150%;
+    width: 2px;
+    background-color: #333;
+  }
+  .close:before {
+    transform: rotate(45deg);
+  }
+  .close:after {
+    transform: rotate(-45deg);
+  }
+  
+@media (max-width: 400px) {
+    header #logo {
+        width: 25%;
+        margin-top: 8%;
+    }
+    header .wrap .member {
+       right: 12%;
+    }
+    
+}
+@media (min-width: 800px) {
+    
+    header #logo {
+        width: 30%;
+        margin-top: 8%;
+    }
+    header h4 {
+        margin-bottom: 8%;
+    }
+    header nav ul{
+        /* padding: .3% 0; */
+        margin: 0 20%;
+    }
+    header nav ul li{
+       cursor: point;
+    }
+}

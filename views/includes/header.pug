@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title 讓愛不流浪 | Love Never Stray
+        link(rel="shortcut icon", href="./imgs/logo.png")
+        link(rel='stylesheet' href='./stylesheets/reset.css')
+        link(rel='stylesheet' href='./stylesheets/header.css')
+        
+        //- Bootstrap CSS
+        link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous')
+        link(rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css")
+    body
+        header
+            .wrap
+              .logo-wrap
+                a(href="./")
+                  img#logo.animated.fadeIn(src="./imgs/logo.png" alt="logo")
+                h1 讓愛不流浪
+                h4 Love Never Stray
+              .member
+                img(src="./imgs/login_big.jpg" alt="login")
+                p
+            nav
+                ul
+                    a(href="/")
+                        li 主頁
+                    a(href="./adoption?kind=all&paging=0")
+                        li 認養
+                    a(href="./notice")
+                        li 須知
+        .signup-page
+          .close.signup
+          .form
+            .title 註冊
+            .subtitle
+                span 已有帳號？
+                p.change-login 登入
+            span 姓名
+            input(type="text" class="name" name="name" placeholder="Name" required)
+            span 電子郵件
+            input(type="text" class="email" name="email" placeholder="Email" required)
+            span 密碼
+            input(type="password" class="password" name="password" placeholder="Password" required)
+            span.message Message
+            button(type="submit" onclick="signup()") 註冊
+        .login-page
+          .close.login
+          .form
+            .title 登入
+            .subtitle
+              span 未有帳號？
+              p.change-signup 註冊
+            span 電子郵件
+            input(type="text" class="email" name="email" placeholder="Email" required)
+            span 密碼
+            input(type="password" class="password" name="password" placeholder="Password" required)
+            span.message Message
+            button(type="submit" onclick="login()") 登入
+            .line-wrap
+              .line
+              p or
+              .line
+            .fb-login-button(data-size="large" data-button-type="continue_with" onlogin="checkLoginState()" scope="public_profile,email")
+        script(src="./js/lib.js")
+        script(src="./js/user.js")
+        #fb-root
+        script(async="" defer="" crossorigin="anonymous" src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v4.0&appId=2263463080567166&autoLogAppEvents=1")
+        block content
+        
